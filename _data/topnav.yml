@@ -1,4 +1,4 @@
-## 
+ta## 
 ## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
 subitems:
   - title: About
@@ -10,7 +10,7 @@ subitems:
       - url: /how_to_contribute
       - title: Style guidelines
       - url: /how_to_contribute
-      - title: Page guidelines
+      - title: Page metadata and guidelines
       - url: /how_to_contribute
   - title: Editorial Board
     url: /how_to_contribute
