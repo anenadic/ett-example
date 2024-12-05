@@ -3,7 +3,7 @@ ta##
 subitems:
   - title: About
     url: /about
-  - title: How to Contribute
+  - title: How to get involved
     url: /how_to_contribute
     subitems:
       - title: General contributing guidelines
@@ -14,5 +14,7 @@ subitems:
         url: /how_to_contribute
       - title: Style guidelines
         url: /how_to_contribute
+      - title: Contact us
+        url: /contact  
   - title: Editorial Board
     url: /how_to_contribute
