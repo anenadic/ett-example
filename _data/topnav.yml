@@ -7,12 +7,12 @@ subitems:
     url: /how_to_contribute
     subitems:
       - title: General contributing guidelines
-      - url: /how_to_contribute
+        url: /how_to_contribute
       - title: Metadata guidelines
-      - url: /how_to_contribute   
+        url: /how_to_contribute   
       - title: Page guidelines
-      - url: /how_to_contribute
+        url: /how_to_contribute
       - title: Style guidelines
-      - url: /how_to_contribute
+        url: /how_to_contribute
   - title: Editorial Board
     url: /how_to_contribute
