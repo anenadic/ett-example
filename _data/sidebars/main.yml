@@ -3,5 +3,10 @@ subitems:
     url: /index
   - title: Example page
     url: /example_page
-
+  - title: Example 2
+    url: /index
+    - title: Sub page
+      url: /example_page 
+    - title: Sub page 2
+      url: /example_page 
   
