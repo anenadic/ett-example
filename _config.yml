@@ -28,7 +28,7 @@ defaults:
     scope:
       path: "pages/contributing"
     values:
-      sidebar: contributing_sidebar
+      sidebar: contributing
 
 theme_variables: 
   # git_host: GitHub
