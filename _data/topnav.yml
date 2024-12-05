@@ -5,5 +5,12 @@ subitems:
     url: /about
   - title: How to Contribute
     url: /how_to_contribute
+    subitems:
+      - title: Contributing guidelines
+      - url: /how_to_contribute
+      - title: Style guidelines
+      - url: /how_to_contribute
+      - title: Page guidelines
+      - url: /how_to_contribute
   - title: Editorial Board
     url: /how_to_contribute
