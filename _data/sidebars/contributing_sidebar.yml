@@ -1,0 +1,17 @@
+- title: How to get involved
+  url: /how_to_contribute
+  subitems:
+      - title: General contributing guidelines
+        url: /contribution_guidelines
+      - title: Metadata guidelines
+        url: /how_to_contribute   
+      - title: Page guidelines
+        url: /how_to_contribute
+      - title: Style guidelines
+        url: /how_to_contribute
+      - title: Join Editorial Board
+        url: /editorial_board
+      - title: Contact us
+        url: /contact  
+- title: Editorial Board
+  url: /editorial_board
