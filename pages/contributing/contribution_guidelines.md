@@ -1,5 +1,6 @@
 ---
 title: How to contribute to RSQKit
+sidebar: contributing_sidebar
 ---
 
 Everyone is welcome to contribute to the RSQKit. You may suggest or edit content following one of the options below:
