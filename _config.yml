@@ -24,6 +24,11 @@ defaults:
       permalink: /:basename
       layout: "page"
       sidebar: main
+  -
+    scope:
+      path: "pages/contribute"
+    values:
+      sidebar: contributing_sidebar
 
 theme_variables: 
   # git_host: GitHub
