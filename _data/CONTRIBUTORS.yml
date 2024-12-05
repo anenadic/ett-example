@@ -10,10 +10,10 @@
 #    affiliation: affiliation
 #    image_url: absolute path to image (default image from github)
 
-Example contributor:
-    git: 
-    email: 
+Aleks:
+    git: anenadic
+    email: me@me.com 
     orcid: 
-    role: 
-    affiliation: 
+    role: Sigma
+    affiliation: Sigma Town
 
