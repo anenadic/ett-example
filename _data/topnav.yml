@@ -2,6 +2,8 @@
 subitems:
   - title: About
     url: /about
+  - title: Editorial Board
+    url: /editorial_board
   - title: How to get involved
     url: /how_to_get_involved
     subitems:
@@ -17,7 +19,5 @@ subitems:
         url: /editors_checklist
       - title: Contact Us
         url: /contact  
-  - title: Editorial Board
-    url: /editorial_board
   - title: Contact us
     url: /contact  
