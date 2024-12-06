@@ -2,8 +2,6 @@
 title: Editors checklist
 ---
 
-## Editors Checklist
-
 Before approving and merging a pull request (PR), the Editors will check that:
 
 - The modified page(s) layout looks correct on the Web site (either by checking the branch with updates locally on Editor's machine or in a fork in GitHub).
