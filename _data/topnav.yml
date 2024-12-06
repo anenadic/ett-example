@@ -7,7 +7,7 @@ subitems:
   - title: How to get involved
     url: /how_to_get_involved
     subitems:
-      - title: General Contributing Guidelines
+      - title: Contributing Guidelines
         url: /contribution_guidelines
       - title: Metadata Guidelines
         url: /metadata_guidelines   
