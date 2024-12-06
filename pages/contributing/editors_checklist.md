@@ -1,6 +1,5 @@
 ---
 title: Editors checklist
-summary: Checklist for Editors before approving and merging a pull request (PR).
 ---
 
 ## Editors Checklist
