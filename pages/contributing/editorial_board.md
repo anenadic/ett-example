@@ -3,7 +3,8 @@ title: Editorial Board
 ---
 
 ## Meet the editorial board members
-{% include contributor-carousel-selection.html %}
+
+{% include contributor-carousel-selection.html role="Editor" %}
 
 ## Join as editorial board member
 

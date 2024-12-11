@@ -1,19 +1,46 @@
-# List of contributors
-#
-# reference maintainers/contributors by their name used in contributors metadata section on the pages.
-# Extra metadata that is possible to add:
-# Full Name:
-#    git: github id
-#    email: email adress
-#    orcid: ocrid id
-#    role: the role of the contributor
-#    affiliation: affiliation
-#    image_url: absolute path to image (default image from github)
-
-Aleks:
-    git: anenadic
-    email: me@me.com 
-    orcid: 
-    role: Editor
-    affiliation: Sigma Town
-
+- id: "1"
+  name: Aleks Nenadic
+  github: anenadic
+  orcid: 1234
+  webpage: https://me.com
+  role: Editor
+  affiliation:
+      - Sigma Town
+      - UNIMAN
+- id: "2"
+  name: Daniel Garijo
+  github: dgarijo
+  email: dani@me.com
+  orcid: 5678
+  web: https://me.com
+  role: Editor
+  affiliation:
+      - Madrid
+- id: "3"
+  name: Shoaib Sufi
+  github: shoaibsufi
+  email: ss@me.com
+  web: https://me.com
+  role: Editor
+  affiliation:
+      - UNIMAN
+      - SSI
+      - Timperley
+- id: "4"
+  name: Contributor-X
+  email: ss@me.com
+  orcid: 90
+  affiliation:
+- id: "5"
+  name: Bart Simpson
+  github: bart
+  image_url: https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png
+  email: ss@me.com
+  orcid: 90
+  affiliation: ["Simpsons"]
+- id: "6"
+  name: Homer Simpson
+  github: bart
+  email: ss@me.com
+  orcid: 90
+  affiliation: ["Simpsons"]

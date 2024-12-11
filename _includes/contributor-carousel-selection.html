@@ -1,0 +1,99 @@
+{% if include.role %}
+    {%- assign contributors = site.data.CONTRIBUTORS | where: "role", include.role %}
+{% else %}
+    {%- assign contributors = site.data.CONTRIBUTORS %}
+{% endif %}
+
+{% if contributors == [] %}
+No matching contributors.
+{% else %}
+{% assign nr = include.col | default: 5 %}
+<div id="contributors-carousel" class="carousel carousel-dark slide my-4" data-ride="carousel" data-bs-interval="7000">
+    <div class="carousel-inner">
+        {%- assign counter = 0 %}
+        {%- for contributor in contributors %}
+            {%- capture modulo %}{{ counter | modulo:nr }}{% endcapture %}
+            {%- if modulo == '0' or counter == 0 %}
+                {%- if counter != 0 %}
+    </div>
+</div>
+                {%- endif %}
+            <div class="carousel-item {% if counter == 0 %}active{% endif %}">
+                <div class="row row-cols-{{nr}} contributor-cards g-1 g-xl-4 ">
+            {%- endif %}
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="position-relative">
+                            {%- if contributor.image_url %}
+                                <div class="p-3">
+                                    <div class="ratio ratio-1x1">
+                                        <div class="contr-placeholder rounded-circle" style="background-image: url({{ contributor.image_url }});">
+                                        </div>
+                                    </div>
+                                </div>
+                            {%- else %}
+                                {%- if contributor.github %}
+                                <img src="https://avatars.githubusercontent.com/{{contributor.github}}" class="card-img-top p-3 rounded-circle" alt="{{ contributor.name }}">
+                                {%- else %}
+                                <div class="p-3">
+                                    <div class="ratio ratio-1x1">
+                                        <div class="contr-placeholder rounded-circle d-flex justify-content-center align-items-center">
+                                        {%- assign contr_name = contributor.name | split: " " %}
+                                        {%- assign initials = "" %}
+                                        {%- for name in contr_name %}
+                                            {%- assign initial = name | slice: 0,1 | capitalize %}
+                                            {%- assign initials = initials | append: initial %}
+                                        {% endfor %}
+                                            <span class="fs-2 fw-bold">{{ initials }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {%- endif %}
+                            {%- endif %}
+                            {%- if contributor.role %}
+                                <span class="badge position-absolute top-0 end-0">{{ contributor.role | capitalize }}</span>
+                            {%- endif %}
+                            </div>
+                            <div class="card-body text-center py-0">
+                                <p class="card-title">{{ contributor.name }}</p>
+                                {%- if contributor.affiliation %}
+                                    <p class="card-affiliation">{{ contributor.affiliation | join: ", " }}</p>
+                                {%- endif %}
+                            </div>
+                            {%- if contributor.github or contributor.email or contributor.orcid or contributor.web or contributor.linkedin %}
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-center gap-1 gap-md-2">
+                                    {%- if contributor.github %}
+                                    <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://github.com/{{contributor.github}}"><i class="fa-brands fa-github"></i></a>
+                                    {%- endif %}
+                                    {%- if contributor.email %}
+                                    <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="mailto:{{contributor.email}}"><i class="fa-solid fa-envelope"></i></a>
+                                    {%- endif %}
+                                    {%- if contributor.orcid %}
+                                    <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://orcid.org/{{contributor.orcid}}"><i class="fa-brands fa-orcid"></i></a>
+                                    {%- endif %}
+                                    {%- if contributor.web %}
+                                    <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="{{contributor.web}}"><i class="fa-solid fa-globe"></i></a>
+                                    {%- endif %}
+                                </div>
+                            </div>
+                            {%- endif %}
+                        </div>
+                    </div>
+                    {%- assign counter = counter | plus:1 %}
+                    {%- if forloop.last %}
+                </div>
+                {%- endif %}
+    {%- endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#contributors-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#contributors-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+</div>
+{% endif %}

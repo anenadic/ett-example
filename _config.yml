@@ -1,13 +1,13 @@
-title: Website title
+title: Aleks's Test
 # This appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-topnav_title: Website title
+topnav_title: Aleks's test ETT site
 # Optional: this appears on the top navigation bar next to the main_logo.svg icon
 
 description: "Example of ELIXIR toolkit theme as a remote jekyll theme"
 # Metadata description of the website
 
-remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@3.2.0
+remote_theme: ELIXIR-Belgium/elixir-toolkit-theme
 
 exclude:
   - README.md
@@ -19,7 +19,7 @@ defaults:
   -
     scope:
       path: ""
-      type: "pages"
+      type: pages
     values:
       permalink: /:basename
       layout: "page"
@@ -29,6 +29,20 @@ defaults:
       path: "pages/contributing"
     values:
       sidebar: contributing
+  -
+    scope:
+      path: "pages/your_tasks/"
+    values:
+      type: your_tasks
+      type_img: /assets/img/section-icons/tick.svg
+  -
+    scope:
+      path: "pages/your_tasks/TEMPLATE_your_tasks.md"
+      type: "pages"
+    values:
+      sitemap: false
+      search_exclude: true
+      no_robots: true
 
 theme_variables: 
   # git_host: GitHub
@@ -65,7 +79,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-github-metadata
   - jemoji
-  - webrick
+  - jekyll-octicons
+  - jekyll-scholar
 
 # --- Missing in gitlab: ---
 # github:
