@@ -1,7 +1,7 @@
 ---
 title: Creating a ReadTheDocs Page
 description: Explain aspects about creating a ReadTheDocs page.
-contributors: ["Christian Hüser","Azza Gamgami"]
+contributors: ["shoaib-sufi", "5"]
 page_id: creating_readthedocs
 related_pages: [Software_documentation]
 ---

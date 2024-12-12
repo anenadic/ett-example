@@ -12,7 +12,7 @@ No matching contributors.
     <div class="carousel-inner">
         {%- assign counter = 0 %}
         {%- for contributor in contributors %}
-            {%- capture modulo %}{{ counter | modulo:nr }}{% endcapture %}
+            {%- capture modulo %}{{ counter | modulo: nr }}{% endcapture %}
             {%- if modulo == '0' or counter == 0 %}
                 {%- if counter != 0 %}
     </div>

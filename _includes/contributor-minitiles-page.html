@@ -1,0 +1,95 @@
+{% if page.contributors and page.contributors.size != 0 %}
+    {% assign page_contributors = "" | split: "," %} {% comment %} Empty array! {% endcomment %}
+    {% assign page_contributor_ids = page.contributors %}
+    {% for id in page_contributor_ids %}
+        {% assign page_contributor = site.data.CONTRIBUTORS | where: "id", id | first %}
+        {% assign page_contributors = page_contributors | push: page_contributor %}
+    {% endfor %}
+
+<span class="d-block h2-like fs-2">{{site.theme_variables.contributor-minitiles-page | default: 'Contributors' }}</span>
+<div class="p-4 rounded mt-4 page-contributors d-flex flex-wrap gap-2">
+    {% for contributor in page_contributors %}
+    <div class="dropup-center dropup d-inline-block">
+        <button class="btn btn-sm dropdown-toggle contributor-link d-flex gap-2 align-items-center hover-primary position-relative"  type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,10">
+            <div>
+                {%- if contributor.image_url %}
+                <div class="ratio ratio-1x1 contributor-img-sm">
+                    <div class="contr-placeholder rounded-circle" style="background-image: url({{ contributor.image_url }});">
+                    </div>
+                </div>
+                {%- elsif contributor.github %}
+                <img class="img-fluid rounded-circle contributor-img-sm" src="https://avatars.githubusercontent.com/{{ contributor.github }}" alt="Avatar of the contributor {{ contributor.name }}">
+                {%- else %}
+                <div class="contr-placeholder rounded-circle d-flex justify-content-center align-items-center contributor-img-sm">
+                    {%- assign contr_name = contributor.name | split: " " %}
+                    {%- assign initials = "" %}
+                    {%- for name in contr_name %}
+                    {%- assign initial = name | slice: 0,1 | capitalize %}
+                    {%- assign initials = initials | append: initial %}
+                    {%- endfor %}
+                    <span class="fw-bold">{{ initials }}</span>
+                </div>
+                {% endif %}
+            </div>
+            <div>
+                {{ contributor.name }}
+            </div>
+        </button>
+        <div class="dropdown-menu shadow p-0 border-0 contributor-cards">
+            <div class="card">
+                <div class="position-relative">
+                    {% if contributor.image_url %}
+                    <div class="p-3">
+                        <div class="ratio ratio-1x1">
+                            <div class="contr-placeholder rounded-circle" style="background-image: url({{ contributor.image_url }});">
+                            </div>
+                        </div>
+                    </div>
+                    {% elsif contributor.github %}
+                    <img src="https://avatars.githubusercontent.com/{{contributor.github}}" class="card-img-top p-3 rounded-circle" alt="{{ contributor.name }}">
+                    {% else %}
+                    <div class="p-3">
+                        <div class="ratio ratio-1x1">
+                            <div class="contr-placeholder rounded-circle d-flex justify-content-center align-items-center">
+                                {%- assign contr_name = contributor.name | split: " " %}
+                                {%- assign initials = "" %}
+                                {%- for name in contr_name %}
+                                {%- assign initial = name | slice: 0,1 | capitalize %}
+                                {%- assign initials = initials | append: initial %}
+                                {%- endfor %}
+                                <span class="fs-2 fw-bold">{{ initials }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if contributor.role %}
+                    <span class="badge position-absolute top-0 end-0">{{ contributor.role | capitalize }}</span>
+                    {%- endif %}
+                </div>
+                <div class="card-body text-center py-0">
+                    <p class="card-title">{{ stripped_name }}</p>
+                    {% if contributor.affiliation %}
+                    <p class="card-affiliation">{{ contributor.affiliation | join: ", "}}</p>
+                    {% endif %}
+                </div>
+                {%- if contributor.github or contributor.email or contributor.orcid %}
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center gap-2">
+                        {% if contributor.github %}
+                        <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://github.com/{{contributor.github}}"><i class="fa-brands fa-github"></i></a>
+                        {% endif %}
+                        {% if contributor.email %}
+                        <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="mailto:{{contributor.email}}"><i class="fa-solid fa-envelope"></i></a>
+                        {%- endif %}
+                        {%- if contributor.orcid %}
+                        <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://orcid.org/{{contributor.orcid}}"><i class="fa-brands fa-orcid"></i></a>
+                        {%- endif %}
+                    </div>
+                </div>
+                {%- endif %}
+            </div>
+        </div>
+    </div>
+    {%- endfor %}
+</div>
+{%- endif %}

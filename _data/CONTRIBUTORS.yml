@@ -1,8 +1,8 @@
 - id: "1"
-  name: Aleks Nenadic
+  name: "Aleks Nenadic"
   github: anenadic
   orcid: 1234
-  webpage: https://me.com
+  web: https://me.com
   role: Editor
   affiliation:
       - Sigma Town
@@ -16,7 +16,7 @@
   role: Editor
   affiliation:
       - Madrid
-- id: "3"
+- id: "shoaib-sufi"
   name: Shoaib Sufi
   github: shoaibsufi
   email: ss@me.com
@@ -27,10 +27,7 @@
       - SSI
       - Timperley
 - id: "4"
-  name: Contributor-X
-  email: ss@me.com
-  orcid: 90
-  affiliation:
+  name: "Contributor-X"
 - id: "5"
   name: Bart Simpson
   github: bart
@@ -40,7 +37,7 @@
   affiliation: ["Simpsons"]
 - id: "6"
   name: Homer Simpson
-  github: bart
+  github: homer
   email: ss@me.com
   orcid: 90
   affiliation: ["Simpsons"]

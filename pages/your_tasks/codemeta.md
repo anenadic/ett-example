@@ -1,7 +1,7 @@
 ---
 title: Writing a CodeMeta file
 description: Overview on how to write a CodeMeta file
-contributors: ["Daniel Garijo"]
+contributors: ["2"]
 page_id: codemeta
 related_pages: [zenodo_doi]
 ---
