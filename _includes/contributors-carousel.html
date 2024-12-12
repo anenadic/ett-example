@@ -60,7 +60,7 @@ No matching contributors.
                                     <p class="card-affiliation">{{ contributor.affiliation | join: ", " }}</p>
                                 {%- endif %}
                             </div>
-                            {%- if contributor.github or contributor.email or contributor.orcid or contributor.web or contributor.linkedin %}
+                            {%- if contributor.github or contributor.email or contributor.orcid or contributor.web_url or contributor.linkedin %}
                             <div class="card-footer">
                                 <div class="d-flex justify-content-center gap-1 gap-md-2">
                                     {%- if contributor.github %}
@@ -72,8 +72,8 @@ No matching contributors.
                                     {%- if contributor.orcid %}
                                     <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://orcid.org/{{contributor.orcid}}"><i class="fa-brands fa-orcid"></i></a>
                                     {%- endif %}
-                                    {%- if contributor.web %}
-                                    <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="{{contributor.web}}"><i class="fa-solid fa-globe"></i></a>
+                                    {%- if contributor.web_url %}
+                                    <a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="{{contributor.web_url}}"><i class="fa-solid fa-globe"></i></a>
                                     {%- endif %}
                                 </div>
                             </div>

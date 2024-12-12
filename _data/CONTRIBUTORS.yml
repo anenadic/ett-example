@@ -1,8 +1,22 @@
+# Proposed contributors schema
+#- id: "bart-simpson" # compulsory and must be unique across this file
+#  name: "Bart Simpson" # compulsory
+#  image_url: https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png # optional
+#  github: bart # optional
+#  orcid: 1234 # optional
+#  web_url: https://me.com # optional
+#  linkedin: bart-simpson-bb64b96/ # optional
+#  role: Editor # optional
+#  affiliation: # list, optional
+#    - Sigma Town
+#    - UNIMAN
+
+
 - id: "1"
   name: "Aleks Nenadic"
   github: anenadic
   orcid: 1234
-  web: https://me.com
+  web_url: https://me.com
   role: Editor
   affiliation:
       - Sigma Town
@@ -12,7 +26,7 @@
   github: dgarijo
   email: dani@me.com
   orcid: 5678
-  web: https://me.com
+  web_url: https://me.com
   role: Editor
   affiliation:
       - Madrid
@@ -20,7 +34,7 @@
   name: Shoaib Sufi
   github: shoaibsufi
   email: ss@me.com
-  web: https://me.com
+  web_url: https://me.com
   role: Editor
   affiliation:
       - UNIMAN
